@@ -16,6 +16,25 @@ app.directive('supermanattribute', function(){
   };
 });
 
+app.directive('supermanclass', function(){
+  return{
+    restrict: "C",
+    link: function(){
+      alert("Here I am to save the day as a class");
+    }
+  };
+});
+
+app.directive('supermancomment', function(){
+  return{
+    restrict: "M",
+    link: function(){
+      alert("Here I am to save the day as a comment");
+    }
+  };
+});
+
 // E = element
 // A = attribute
 // C = class
+// M = comment
