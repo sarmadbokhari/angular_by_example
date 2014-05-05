@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Learning Angular JS - Binding</title>
+    <link rel="stylesheet" href="foundation-5.2.2/css/foundation.min.css">
+  </head>
+
+  <body ng-app="myapp">
+    <input type="text" ng-model="data.message">
+    <h1>{{data.message}}</h1>
+
+    <div ng-controller="FirstCtrl">
+      <input type="text" ng-model="data.message">
+      <h1>{{data.message}}</h1>
+    </div>
+
+    <div ng-controller="SecondCtrl">
+      <input type="text" ng-model="data.message">
+      <h1>{{data.message}}</h1>
+    </div>
+
+    <script type="text/javascript" src="angular.min.js"></script>
+    <script type="text/javascript" src="controller_inheritance.js"></script>
+  </body>
+
+ </html>
