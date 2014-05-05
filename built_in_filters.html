@@ -7,15 +7,54 @@
 
   <body ng-app="myApp">
 
-    <h1>orderBy: </h1>
+
+    <h1>orderBy:'name' and limitTo:5 </h1>
     <div ng-controller="AvengersCtrl">
       <input type="text" ng-model="searchText">
+      <table>
+        <tr ng-repeat="actor in avengers.cast | orderBy:'name' | limitTo:5 | filter:searchText">
+          <td>{{actor.name}}</td>
+          <td>{{actor.character}}</td>
+      </table>
+    </div>
+
+    <h1>orderBy: name</h1>
+    <div ng-controller="AvengersCtrl">
+      <table>
+        <tr ng-repeat="actor in avengers.cast | orderBy:'name'">
+          <td>{{actor.name}}</td>
+          <td>{{actor.character}}</td>
+      </table>
+    </div>
+
+    <h1>orderBy: name reversed </h1>
+    <div ng-controller="AvengersCtrl">
       <table>
         <tr ng-repeat="actor in avengers.cast | orderBy:'-name'">
           <td>{{actor.name}}</td>
           <td>{{actor.character}}</td>
       </table>
     </div>
+
+    <h1>limitTo: 5 </h1>
+    <div ng-controller="AvengersCtrl">
+      <table>
+        <tr ng-repeat="actor in avengers.cast | limitTo:5">
+          <td>{{actor.name}}</td>
+          <td>{{actor.character}}</td>
+      </table>
+    </div>
+
+    <h1>limitTo: -5 (last five) </h1>
+    <div ng-controller="AvengersCtrl">
+      <table>
+        <tr ng-repeat="actor in avengers.cast | limitTo:-5">
+          <td>{{actor.name}}</td>
+          <td>{{actor.character}}</td>
+      </table>
+    </div>
+
+
 
 
     <script type="text/javascript" src="angular.min.js"></script>
