@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Learning Angular JS - Directives Communicating with Controllers</title>
+    <title>Learning Angular JS - Isolating scoping</title>
     <link rel="stylesheet" href="foundation-5.2.2/css/foundation.min.css">
   </head>
 
   <body ng-app="taskApp">
 
-    <person></person>
-    <person></person>
-    <person></person>
-    <person></person>
-    <person></person>
+    <div ng-controller="TaskCtrl">
+      <person done="logTask(task)"></person>
+    </div>
+
 
     <script type="text/javascript" src="angular.min.js"></script>
     <script type="text/javascript" src="isolate_scope.js"></script>
