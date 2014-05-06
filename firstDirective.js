@@ -49,6 +49,6 @@ app.directive('super', function(){
 // });
 
 // E = element
-// A = attribute
+// A = attribute - DEFAULTS TO A if no restriction is applied
 // C = class
 // M = comment
