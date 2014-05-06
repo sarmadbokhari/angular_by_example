@@ -34,6 +34,20 @@ app.directive('supermancomment', function(){
   };
 });
 
+app.directive('super', function(){
+  return{
+    restrict: "A",
+    template: "<p>I am superman attribute</p>"
+    };
+});
+
+// app.directive('flash', function(){
+//   return{
+//     restrict: "A",
+//     template: "<p>I am flash attribute</p>"
+//     };
+// });
+
 // E = element
 // A = attribute
 // C = class
