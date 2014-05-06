@@ -6,9 +6,18 @@ app.controller("AppCtrl", function($scope){
 
 app.directive("drink", function(){
   return {
+    template: "<div>{{ flavor }}</div>",
+    link: function(scope, element, attrs){
+      scope.flavor = attrs.flavor;
+    }
+  };
+});
+
+app.directive("food", function(){
+  return {
     scope: {
-      flavor: "@"
+      style: "@"
     },
-    template: "<div>{{ flavor }}</div>"
+    template: "<div>{{ style }}</div>",
   };
 });
