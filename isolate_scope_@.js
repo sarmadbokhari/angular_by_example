@@ -1,7 +1,8 @@
 var app = angular.module("drinkApp", []);
 
 app.controller("AppCtrl", function($scope){
-
+  // this is how it essentially works, but this is unnecessary
+  // $scope.ctrlFlavor = 'blackberry';
 });
 
 app.directive("drink", function(){
